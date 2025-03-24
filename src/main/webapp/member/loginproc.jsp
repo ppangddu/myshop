@@ -12,7 +12,7 @@ boolean b = memberManager.loginCheck(id, passwd);
 
 if (b) {
 	session.setAttribute("idKey", id); // idKey라는 이름으로 id넣기
-	response.sendRedirect("login.jsp");
+	response.sendRedirect("../guest/guest_index.jsp");
 } else {
 	response.sendRedirect("logfail.html");
 }

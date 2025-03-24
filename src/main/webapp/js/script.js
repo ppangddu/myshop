@@ -45,3 +45,41 @@ function funcLogin() {
 function funcNewMember() {
 	location.href = "register.jsp";
 }
+
+// 쇼핑몰 고객이 로그인 후 자신의 정보 수정
+function memberUpdate() {
+	// 입력 자료 오류 검사 ...
+	document.updateForm.submit();
+}
+
+function memberUpdateCancel() {
+	location.href="../guest/guest_index.jsp";
+}
+
+function memberDelete() {
+	alert("정말 탈퇴하시겠습니까?");
+}
+
+
+// 관리자 관련
+function funcAdminLogin() {
+	if (adminLoginForm.admin_id.value === "") {
+		alert("관리자 아이디를 입력하세요.");
+		adminLoginForm.admin_id.focus();
+		return;
+	}
+	
+	if (adminLoginForm.admin_passwd.value === "") {
+			alert("관리자 password를 입력하세요.");
+			adminLoginForm.passwd.focus();
+			return;
+		}
+		
+	adminLoginForm.submit();
+}
+
+function funcAdminHome() {
+	location.href="../guest/guest_index.jsp";
+}
+
+
