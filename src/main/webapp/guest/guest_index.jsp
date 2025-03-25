@@ -35,7 +35,7 @@
 			 background-image: url(../images/usagi_back.png);
 			 background-size:50%">
 				<br>고객님 어서오세요.
-				로그인 후 이용가능합니다.<br><br><br><br><br><br><br><br><br><br>
+				로그인 후 이용가능합니다.<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 			</td>
 		</tr>
 		<%

@@ -218,4 +218,34 @@ public class MemberManager {
 	    }
 	    return b;
 	}
+	
+	//관리자 : 전체 회원 읽기
+	public ArrayList<MemberDto> getMemberAll() {
+		ArrayList<MemberDto> list = new ArrayList<MemberDto>();
+		
+		try {
+			conn = ds.getConnection();
+			String sql = "select * from member order by id";
+			pstmt = conn.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			while(rs.next()) { // 복수개
+				MemberDto dto = new MemberDto();
+				dto.setId(rs.getString("id"));
+				dto.setName(rs.getString("name"));
+				dto.setEmail(rs.getString("email"));
+				dto.setPhone(rs.getString("phone"));
+				list.add(dto);
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+		} finally {
+	        try {
+	            if (pstmt != null) pstmt.close();
+	            if (conn != null) conn.close();
+	        } catch (Exception e2) {
+	        	
+	        }
+	    }
+		return list;
+	}
 }

@@ -82,4 +82,24 @@ function funcAdminHome() {
 	location.href="../guest/guest_index.jsp";
 }
 
+function memberUpdate(id) { // 관리자 전용 전체 회원 수정용
+	//alert(id);
+	document.updateFrm.id.value = id;
+	document.updateFrm.submit();
+	
+}
 
+function memberUpdateAdmin() {
+	document.updateFormAdmin.submit();
+}
+
+
+function memberUpdateCancelAdmin() {
+	location.href="membermanager.jsp";
+}
+
+
+function productDetail(no) { //관리자 상품 처리
+	document.detailFrm.no.value = no;
+	document.detailFrm.submit();	
+}
