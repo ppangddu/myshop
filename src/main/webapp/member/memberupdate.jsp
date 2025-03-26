@@ -33,7 +33,7 @@ window.onload = () => {
 </script>
 </head>
 <body>
-	<form name="updateForm" method="post" action="memberupdateproc.jsp">
+	<form name="updateFrm" method="post" action="memberupdateproc.jsp">
 		<table border="1">
 			<tr align="center" style="background-color: #8899aa">
 				<td colspan="2"><b style="color: #FFFFFF"><%=memberDto.getName() %> 님의 정보수정</b></td>
