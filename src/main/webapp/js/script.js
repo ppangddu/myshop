@@ -103,3 +103,39 @@ function productDetail(no) { //관리자 상품 처리
 	document.detailFrm.no.value = no;
 	document.detailFrm.submit();	
 }
+
+function productUpdate(no) {
+	document.updateFrm.no.value = no; //hidden이 no
+	document.updateFrm.submit();
+	
+}
+
+function productDelete(no) {
+	if (confirm("정말 삭제할까요?")) {
+		document.delFrm.no.value = no;	
+		document.delFrm.submit();	
+	}
+}
+
+
+//고객 : 상품 
+function productDetailGuest(no) {
+	document.detailFrm.no.value = no;	
+	document.detailFrm.submit();	
+}
+
+//관리자가 주문 처리
+function orderDetail(no) {
+	document.detailFrm.no.value = no;	
+	document.detailFrm.submit();
+}
+
+function orderUpdate(form) {
+	document.detailFrm.flag.value="update";
+	form.submit();
+}
+
+function orderDelete(form) {
+	document.detailFrm.flag.value="delete";
+	form.submit();
+}
